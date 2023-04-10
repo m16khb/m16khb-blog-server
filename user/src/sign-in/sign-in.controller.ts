@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { SignInService } from './sign-in.service';
 import { CreateSignInDto } from './dto/create-sign-in.dto';
 import { UpdateSignInDto } from './dto/update-sign-in.dto';
@@ -28,7 +36,7 @@ export class SignInController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.signInService.remove(+id);
+  delete(@Param('id') id: string) {
+    return this.signInService.delete(+id);
   }
 }

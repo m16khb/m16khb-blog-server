@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { SignUpService } from './sign-up.service';
 import { CreateSignUpDto } from './dto/create-sign-up.dto';
 import { UpdateSignUpDto } from './dto/update-sign-up.dto';
@@ -28,7 +36,7 @@ export class SignUpController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.signUpService.remove(+id);
+  delete(@Param('id') id: string) {
+    return this.signUpService.delete(+id);
   }
 }

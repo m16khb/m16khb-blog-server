@@ -20,7 +20,7 @@ export class SignInService {
     return `This action updates a #${id} signIn`;
   }
 
-  remove(id: number) {
+  delete(id: number) {
     return `This action removes a #${id} signIn`;
   }
 }
